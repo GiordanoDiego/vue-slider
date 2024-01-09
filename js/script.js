@@ -50,7 +50,7 @@ createApp({
             }
         },
         getActiveSlides(){
-            if(this.currentActive == indiceThumb){
+            if(this.currentActive == this.indiceThumb){
                 return 'active';
             }else{
                 return '';
