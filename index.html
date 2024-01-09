@@ -27,25 +27,12 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev" @click="prevSlides()"></div> 
-                    <div class="next" @click="nextSlides()"></div>
+                    <div class="prev" @click="prevSlide()"></div> 
+                    <div class="next" @click="nextSlide()"></div>
 
-                    <div class="thumb" :class="getActiveSlides(i)" v-for="(slide, i) in slides" >
+                    <div class="thumb" v-for="(slide, i) in slides" >
                         <img :src="slide.image" :alt="slide.title" />
                     </div>
-
-                    <!-- <div class="thumb">
-                        <img src="img/02.webp" alt="Ratchet & Clank" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/03.webp" alt="Fortnite" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/04.webp" alt="Stray" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/05.webp" alt="Avengers" />
-                    </div> -->
                 </div>
 
             </div>

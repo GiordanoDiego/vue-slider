@@ -5,7 +5,6 @@ createApp({
     data() { // creo le variabili visibili nella parte montata
     return {
         currentActive: 0, 
-        indiceThumb: 0,
         //contatore che implementerò per cambiare slides
         slides: [
             {
@@ -29,33 +28,32 @@ createApp({
                     title: "Marvel's Avengers",
                     text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
                 }
-            ],
-        }   
-    }, methods:{ //creo le funzioni
-        prevSlides(){
+            ]
+        };   
+    }, 
+    methods:{ //creo le funzioni
+        prevSlide(){
             if(this.currentActive > 0){
                 this.currentActive--; 
                 }
                 else {
-                this.currentActive = this.slides.lenght -1;}
+                console.log("prev dentro elsee");
+                this.currentActive = this.slides.lenght - 1;}
 
         },
-        nextSlides(){
-            if(this.currentActive < this.slides.lenght -1){
+        nextSlide(){
+            console.log("prima", this.currentActive);
+
+            if(this.currentActive < this.slides.lenght - 1){
                 this.currentActive++;
                 console.log("dentro if", this.currentActive);
+
             }else{
                 this.currentActive = 0;
-                console.log("dentro else",this.currentActive);
+                console.log("next dentro else", this.currentActive);
+
             }
-        },
-        getActiveSlides(){
-            if(this.currentActive == this.indiceThumb){
-                return 'active';
-            }else{
-                return '';
-            }
-        }
+        }  
     }
 
 }).mount('#app');
