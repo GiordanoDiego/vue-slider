@@ -53,6 +53,13 @@ createApp({
                 console.log("next dentro else", this.currentActive);
 
             }
+        }, 
+        thumbActive(indiceThumb){
+            if (this.currentActive == indiceThumb){
+                return 'active';
+            } else {
+                return '';
+            }
         }  
     }
 
