@@ -35,16 +35,16 @@ createApp({
         prevSlide(){
             if(this.currentActive > 0){
                 this.currentActive--; 
-                }
-                else {
+            } else {
                 console.log("prev dentro elsee");
-                this.currentActive = this.slides.lenght - 1;}
+                this.currentActive = this.slides.length - 1;
+            }
 
         },
         nextSlide(){
             console.log("prima", this.currentActive);
 
-            if(this.currentActive < this.slides.lenght - 1){
+            if(this.currentActive < (this.slides.length - 1)){
                 this.currentActive++;
                 console.log("dentro if", this.currentActive);
 
