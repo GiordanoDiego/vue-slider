@@ -60,7 +60,10 @@ createApp({
             } else {
                 return '';
             }
-        }  
+        },
+        changeSlide(indiceThumb){
+            this.currentActive = indiceThumb;
+        } 
     }
 
 }).mount('#app');
